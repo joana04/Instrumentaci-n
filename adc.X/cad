@@ -1,0 +1,41 @@
+#include <xc.h>
+#pragma config FOSC=INTRC_NOCLKOUT
+#pragma config WDTE=OFF
+#pragma config IESO=OFF
+#pragma config FCMEN=OFF
+
+void main(void) {
+    TRISD=0X00;
+    TRISB=0XFF;
+    ADCON0bits.ADON=1; // Convertidor Enable 
+    // // Elegir AN8
+    OPTION_REGbits.T0CS=0;
+    ADCON0bits.CHS3=1; // Pin B2
+    ADCON0bits.ADCS1=0; // Iteracion de la conversion a FOSC/32
+    ADCON1bits.ADFM=0; // Justificado a la izquierda
+    RCSTAbits.SPEN = 1;
+    RCSTAbits.CREN = 1;
+    TXSTAbits.BRGH = 1;
+    TXSTAbits.TXEN = 1;
+    ANSEL=0;
+    ANSELH=0;
+    ADRESL=0;
+    INTCONbits.T0IF=0;
+    PIR1bits.ADIF=0;
+    PORTD=0x0F;
+    TMR0=254;
+    while(1){
+        while(INTCONbits.T0IF!=1);
+        //PORTD=0xFF;
+        TMR0=113;
+        INTCONbits.T0IF=0;
+        ADCON0bits.GO=1;
+        while(PIR1bits.ADIF!=1);
+        PIR1bits.ADIF=0;
+        while(PIR1bits.TXIF != 1);
+        TXREG = ADRESH;
+        //while(PIR1bits.TXIF != 1);
+        //TXREG = ADRESL;
+        PORTD=ADRESH;
+    }
+}

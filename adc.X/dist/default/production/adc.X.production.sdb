@@ -1,0 +1,504 @@
+[p LITE_MODE AUTOSTATIC PIC14 PICREGULAR PICMID ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F887 ]
+[d frameptr 6 ]
+"492 /opt/microchip/xc8/v1.45/sources/common/doprnt.c
+[v _sprintf sprintf `(i  1 e 2 0 ]
+"62 /opt/microchip/xc8/v1.45/sources/common/float.c
+[v ___ftpack __ftpack `(f  1 e 3 0 ]
+"86 /opt/microchip/xc8/v1.45/sources/common/ftadd.c
+[v ___ftadd __ftadd `(f  1 e 3 0 ]
+"56 /opt/microchip/xc8/v1.45/sources/common/ftdiv.c
+[v ___ftdiv __ftdiv `(f  1 e 3 0 ]
+"4 /opt/microchip/xc8/v1.45/sources/common/ftge.c
+[v ___ftge __ftge `(b  1 e 0 0 ]
+"62 /opt/microchip/xc8/v1.45/sources/common/ftmul.c
+[v ___ftmul __ftmul `(f  1 e 3 0 ]
+"15 /opt/microchip/xc8/v1.45/sources/common/ftneg.c
+[v ___ftneg __ftneg `(f  1 e 3 0 ]
+"6 /opt/microchip/xc8/v1.45/sources/common/ftoa.c
+[v _ftoa ftoa `(*.4uc  1 e 1 0 ]
+"18 /opt/microchip/xc8/v1.45/sources/common/ftsub.c
+[v ___ftsub __ftsub `(f  1 e 3 0 ]
+"44 /opt/microchip/xc8/v1.45/sources/common/fttol.c
+[v ___fttol __fttol `(l  1 e 4 0 ]
+"8 /opt/microchip/xc8/v1.45/sources/common/isdigit.c
+[v _isdigit isdigit `(b  1 e 0 0 ]
+"6 /opt/microchip/xc8/v1.45/sources/common/lldiv.c
+[v ___lldiv __lldiv `(ul  1 e 4 0 ]
+"6 /opt/microchip/xc8/v1.45/sources/common/llmod.c
+[v ___llmod __llmod `(ul  1 e 4 0 ]
+"35 /opt/microchip/xc8/v1.45/sources/common/lltoft.c
+[v ___lltoft __lltoft `(f  1 e 3 0 ]
+"28 /opt/microchip/xc8/v1.45/sources/common/lwtoft.c
+[v ___lwtoft __lwtoft `(f  1 e 3 0 ]
+"15 /opt/microchip/xc8/v1.45/sources/common/Umul16.c
+[v ___wmul __wmul `(ui  1 e 2 0 ]
+"6 /opt/microchip/xc8/v1.45/sources/pic/eeprom.c
+[v _eecpymem eecpymem `(v  1 e 1 0 ]
+"39
+[v _memcpyee memcpyee `(v  1 e 1 0 ]
+"26 /home/oscar/MPLABXProjects/ins/adc.X/adc_main.c
+[v _main main `(v  1 e 1 0 ]
+"40
+[v _configTimer configTimer `(v  1 e 1 0 ]
+"48
+[v _configADC configADC `(v  1 e 1 0 ]
+"59
+[v _configUART configUART `(v  1 e 1 0 ]
+"67
+[v _waitTimer waitTimer `(v  1 e 1 0 ]
+"80
+[v _runADC runADC `(v  1 e 1 0 ]
+"87
+[v _sendADC sendADC `(v  1 e 1 0 ]
+"112
+[v _printADC printADC `(v  1 e 1 0 ]
+"130
+[v _defineChar defineChar `(v  1 e 1 0 ]
+"138
+[v _confBusLCD confBusLCD `(v  1 e 1 0 ]
+"159
+[v _comando comando `(v  1 e 1 0 ]
+"185
+[v _dato dato `(v  1 e 1 0 ]
+"212
+[v _configLCD configLCD `(v  1 e 1 0 ]
+"57 /opt/microchip/xc8/v1.45/include/pic16f887.h
+[v _TMR0 TMR0 `VEuc  1 e 1 @1 ]
+"350
+[v _PORTD PORTD `VEuc  1 e 1 @8 ]
+[s S320 . 1 `uc 1 RE0 1 0 :1:0 
+`uc 1 RE1 1 0 :1:1 
+`uc 1 RE2 1 0 :1:2 
+`uc 1 RE3 1 0 :1:3 
+]
+"425
+[u S325 . 1 `S320 1 . 1 0 ]
+[v _PORTEbits PORTEbits `VES325  1 e 1 @9 ]
+[s S99 . 1 `uc 1 RBIF 1 0 :1:0 
+`uc 1 INTF 1 0 :1:1 
+`uc 1 T0IF 1 0 :1:2 
+`uc 1 RBIE 1 0 :1:3 
+`uc 1 INTE 1 0 :1:4 
+`uc 1 T0IE 1 0 :1:5 
+`uc 1 PEIE 1 0 :1:6 
+`uc 1 GIE 1 0 :1:7 
+]
+"480
+[s S108 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 TMR0IF 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 TMR0IE 1 0 :1:5 
+]
+[u S113 . 1 `S99 1 . 1 0 `S108 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES113  1 e 1 @11 ]
+[s S278 . 1 `uc 1 TMR1IF 1 0 :1:0 
+`uc 1 TMR2IF 1 0 :1:1 
+`uc 1 CCP1IF 1 0 :1:2 
+`uc 1 SSPIF 1 0 :1:3 
+`uc 1 TXIF 1 0 :1:4 
+`uc 1 RCIF 1 0 :1:5 
+`uc 1 ADIF 1 0 :1:6 
+]
+"551
+[u S286 . 1 `S278 1 . 1 0 ]
+[v _PIR1bits PIR1bits `VES286  1 e 1 @12 ]
+[s S197 . 1 `uc 1 RX9D 1 0 :1:0 
+`uc 1 OERR 1 0 :1:1 
+`uc 1 FERR 1 0 :1:2 
+`uc 1 ADDEN 1 0 :1:3 
+`uc 1 CREN 1 0 :1:4 
+`uc 1 SREN 1 0 :1:5 
+`uc 1 RX9 1 0 :1:6 
+`uc 1 SPEN 1 0 :1:7 
+]
+"1066
+[s S206 . 1 `uc 1 RCD8 1 0 :1:0 
+`uc 1 . 1 0 :5:1 
+`uc 1 RC9 1 0 :1:6 
+]
+[s S210 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 nRC8 1 0 :1:6 
+]
+[s S213 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 RC8_9 1 0 :1:6 
+]
+[u S216 . 1 `S197 1 . 1 0 `S206 1 . 1 0 `S210 1 . 1 0 `S213 1 . 1 0 ]
+[v _RCSTAbits RCSTAbits `VES216  1 e 1 @24 ]
+"1131
+[v _TXREG TXREG `VEuc  1 e 1 @25 ]
+"1236
+[v _ADRESH ADRESH `VEuc  1 e 1 @30 ]
+[s S133 . 1 `uc 1 ADON 1 0 :1:0 
+`uc 1 GO_nDONE 1 0 :1:1 
+`uc 1 CHS 1 0 :4:2 
+`uc 1 ADCS 1 0 :2:6 
+]
+"1274
+[s S138 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 GO 1 0 :1:1 
+`uc 1 CHS0 1 0 :1:2 
+`uc 1 CHS1 1 0 :1:3 
+`uc 1 CHS2 1 0 :1:4 
+`uc 1 CHS3 1 0 :1:5 
+`uc 1 ADCS0 1 0 :1:6 
+`uc 1 ADCS1 1 0 :1:7 
+]
+[s S147 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 nDONE 1 0 :1:1 
+]
+[s S150 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 GO_DONE 1 0 :1:1 
+]
+[u S153 . 1 `S133 1 . 1 0 `S138 1 . 1 0 `S147 1 . 1 0 `S150 1 . 1 0 ]
+[v _ADCON0bits ADCON0bits `VES153  1 e 1 @31 ]
+[s S73 . 1 `uc 1 PS 1 0 :3:0 
+`uc 1 PSA 1 0 :1:3 
+`uc 1 T0SE 1 0 :1:4 
+`uc 1 T0CS 1 0 :1:5 
+`uc 1 INTEDG 1 0 :1:6 
+`uc 1 nRBPU 1 0 :1:7 
+]
+"1364
+[s S80 . 1 `uc 1 PS0 1 0 :1:0 
+`uc 1 PS1 1 0 :1:1 
+`uc 1 PS2 1 0 :1:2 
+]
+[u S84 . 1 `S73 1 . 1 0 `S80 1 . 1 0 ]
+[v _OPTION_REGbits OPTION_REGbits `VES84  1 e 1 @129 ]
+"1476
+[v _TRISB TRISB `VEuc  1 e 1 @134 ]
+"1600
+[v _TRISD TRISD `VEuc  1 e 1 @136 ]
+"1662
+[v _TRISE TRISE `VEuc  1 e 1 @137 ]
+[s S47 . 1 `uc 1 SCS 1 0 :1:0 
+`uc 1 LTS 1 0 :1:1 
+`uc 1 HTS 1 0 :1:2 
+`uc 1 OSTS 1 0 :1:3 
+`uc 1 IRCF 1 0 :3:4 
+]
+"1880
+[s S53 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 IRCF0 1 0 :1:4 
+`uc 1 IRCF1 1 0 :1:5 
+`uc 1 IRCF2 1 0 :1:6 
+]
+[u S58 . 1 `S47 1 . 1 0 `S53 1 . 1 0 ]
+[v _OSCCONbits OSCCONbits `VES58  1 e 1 @143 ]
+[s S241 . 1 `uc 1 TX9D 1 0 :1:0 
+`uc 1 TRMT 1 0 :1:1 
+`uc 1 BRGH 1 0 :1:2 
+`uc 1 SENDB 1 0 :1:3 
+`uc 1 SYNC 1 0 :1:4 
+`uc 1 TXEN 1 0 :1:5 
+`uc 1 TX9 1 0 :1:6 
+`uc 1 CSRC 1 0 :1:7 
+]
+"2580
+[s S250 . 1 `uc 1 TXD8 1 0 :1:0 
+`uc 1 . 1 0 :5:1 
+`uc 1 nTX8 1 0 :1:6 
+]
+[s S254 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 TX8_9 1 0 :1:6 
+]
+[u S257 . 1 `S241 1 . 1 0 `S250 1 . 1 0 `S254 1 . 1 0 ]
+[v _TXSTAbits TXSTAbits `VES257  1 e 1 @152 ]
+"2968
+[v _ADRESL ADRESL `VEuc  1 e 1 @158 ]
+[s S179 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 VCFG0 1 0 :1:4 
+`uc 1 VCFG1 1 0 :1:5 
+`uc 1 . 1 0 :1:6 
+`uc 1 ADFM 1 0 :1:7 
+]
+"2989
+[u S185 . 1 `S179 1 . 1 0 ]
+[v _ADCON1bits ADCON1bits `VES185  1 e 1 @159 ]
+"3385
+[v _ANSEL ANSEL `VEuc  1 e 1 @392 ]
+"3447
+[v _ANSELH ANSELH `VEuc  1 e 1 @393 ]
+"354 /opt/microchip/xc8/v1.45/sources/common/doprnt.c
+[v _dpowers dpowers `DC[10]ul  1 s 40 dpowers ]
+"26 /home/oscar/MPLABXProjects/ins/adc.X/adc_main.c
+[v _main main `(v  1 e 1 0 ]
+{
+"38
+} 0
+"67
+[v _waitTimer waitTimer `(v  1 e 1 0 ]
+{
+"72
+} 0
+"87
+[v _sendADC sendADC `(v  1 e 1 0 ]
+{
+"90
+[v sendADC@converted converted `f  1 a 3 68 ]
+"89
+[v sendADC@medicion medicion `us  1 a 2 71 ]
+"88
+[v sendADC@parteA parteA `uc  1 a 1 75 ]
+[v sendADC@parteB parteB `uc  1 a 1 74 ]
+[v sendADC@aux aux `uc  1 a 1 73 ]
+"110
+} 0
+"112
+[v _printADC printADC `(v  1 e 1 0 ]
+{
+"117
+[v printADC@temperature temperature `f  1 a 3 57 ]
+"116
+[v printADC@i i `i  1 a 2 62 ]
+"114
+[v printADC@buf buf `*.4uc  1 a 1 61 ]
+"115
+[v printADC@j j `uc  1 a 1 60 ]
+"112
+[v printADC@value value `f  1 p 3 51 ]
+"128
+} 0
+"6 /opt/microchip/xc8/v1.45/sources/common/ftoa.c
+[v _ftoa ftoa `(*.4uc  1 e 1 0 ]
+{
+"10
+[v ftoa@l l `ul  1 a 4 46 ]
+[v ftoa@rem rem `ul  1 a 4 42 ]
+"9
+[v ftoa@cp cp `*.4uc  1 a 1 50 ]
+"6
+[v ftoa@f f `f  1 p 3 36 ]
+[v ftoa@status status `*.39i  1 p 2 39 ]
+"8
+[v ftoa@buf buf `[17]uc  1 s 17 buf ]
+"21
+} 0
+"492 /opt/microchip/xc8/v1.45/sources/common/doprnt.c
+[v _sprintf sprintf `(i  1 e 2 0 ]
+{
+[v sprintf@sp sp `*.4uc  1 a 1 wreg ]
+"528
+[v sprintf@val val `ul  1 a 4 26 ]
+"504
+[v sprintf@prec prec `i  1 a 2 33 ]
+"501
+[v sprintf@width width `i  1 a 2 31 ]
+"499
+[v sprintf@c c `c  1 a 1 35 ]
+"494
+[v sprintf@ap ap `[1]*.4v  1 a 1 25 ]
+"508
+[v sprintf@flag flag `uc  1 a 1 24 ]
+"492
+[v sprintf@sp sp `*.4uc  1 a 1 wreg ]
+[v sprintf@f f `*.24DCuc  1 p 1 10 ]
+"533
+[v sprintf@sp sp `*.4uc  1 a 1 30 ]
+"1541
+} 0
+"8 /opt/microchip/xc8/v1.45/sources/common/isdigit.c
+[v _isdigit isdigit `(b  1 e 0 0 ]
+{
+[v isdigit@c c `uc  1 a 1 wreg ]
+[v isdigit@c c `uc  1 a 1 wreg ]
+"14
+[v isdigit@c c `uc  1 a 1 1 ]
+"15
+} 0
+"15 /opt/microchip/xc8/v1.45/sources/common/Umul16.c
+[v ___wmul __wmul `(ui  1 e 2 0 ]
+{
+"17
+[v ___wmul@product product `ui  1 a 2 4 ]
+"15
+[v ___wmul@multiplier multiplier `ui  1 p 2 0 ]
+[v ___wmul@multiplicand multiplicand `ui  1 p 2 2 ]
+"53
+} 0
+"6 /opt/microchip/xc8/v1.45/sources/common/llmod.c
+[v ___llmod __llmod `(ul  1 e 4 0 ]
+{
+"11
+[v ___llmod@counter counter `uc  1 a 1 9 ]
+"6
+[v ___llmod@divisor divisor `ul  1 p 4 0 ]
+[v ___llmod@dividend dividend `ul  1 p 4 4 ]
+"26
+} 0
+"6 /opt/microchip/xc8/v1.45/sources/common/lldiv.c
+[v ___lldiv __lldiv `(ul  1 e 4 0 ]
+{
+"11
+[v ___lldiv@quotient quotient `ul  1 a 4 9 ]
+"12
+[v ___lldiv@counter counter `uc  1 a 1 13 ]
+"6
+[v ___lldiv@divisor divisor `ul  1 p 4 0 ]
+[v ___lldiv@dividend dividend `ul  1 p 4 4 ]
+"31
+} 0
+"35 /opt/microchip/xc8/v1.45/sources/common/lltoft.c
+[v ___lltoft __lltoft `(f  1 e 3 0 ]
+{
+"37
+[v ___lltoft@exp exp `uc  1 a 1 13 ]
+"35
+[v ___lltoft@c c `ul  1 p 4 8 ]
+"46
+} 0
+"44 /opt/microchip/xc8/v1.45/sources/common/fttol.c
+[v ___fttol __fttol `(l  1 e 4 0 ]
+{
+"47
+[v ___fttol@lval lval `ul  1 a 4 19 ]
+"46
+[v ___fttol@exp1 exp1 `uc  1 a 1 23 ]
+[v ___fttol@sign1 sign1 `uc  1 a 1 18 ]
+"44
+[v ___fttol@f1 f1 `f  1 p 3 10 ]
+"73
+} 0
+"18 /opt/microchip/xc8/v1.45/sources/common/ftsub.c
+[v ___ftsub __ftsub `(f  1 e 3 0 ]
+{
+[v ___ftsub@f2 f2 `f  1 p 3 7 ]
+[v ___ftsub@f1 f1 `f  1 p 3 10 ]
+"27
+} 0
+"86 /opt/microchip/xc8/v1.45/sources/common/ftadd.c
+[v ___ftadd __ftadd `(f  1 e 3 0 ]
+{
+"88
+[v ___ftadd@exp1 exp1 `uc  1 a 1 6 ]
+[v ___ftadd@exp2 exp2 `uc  1 a 1 5 ]
+[v ___ftadd@sign sign `uc  1 a 1 4 ]
+"86
+[v ___ftadd@f1 f1 `f  1 p 3 8 ]
+[v ___ftadd@f2 f2 `f  1 p 3 11 ]
+"148
+} 0
+"15 /opt/microchip/xc8/v1.45/sources/common/ftneg.c
+[v ___ftneg __ftneg `(f  1 e 3 0 ]
+{
+[v ___ftneg@f1 f1 `f  1 p 3 0 ]
+"20
+} 0
+"62 /opt/microchip/xc8/v1.45/sources/common/ftmul.c
+[v ___ftmul __ftmul `(f  1 e 3 0 ]
+{
+"65
+[v ___ftmul@f3_as_product f3_as_product `um  1 a 3 5 ]
+"64
+[v ___ftmul@sign sign `uc  1 a 1 9 ]
+[v ___ftmul@cntr cntr `uc  1 a 1 8 ]
+[v ___ftmul@exp exp `uc  1 a 1 4 ]
+"62
+[v ___ftmul@f1 f1 `f  1 p 3 8 ]
+[v ___ftmul@f2 f2 `f  1 p 3 11 ]
+"157
+} 0
+"4 /opt/microchip/xc8/v1.45/sources/common/ftge.c
+[v ___ftge __ftge `(b  1 e 0 0 ]
+{
+[v ___ftge@ff1 ff1 `f  1 p 3 0 ]
+[v ___ftge@ff2 ff2 `f  1 p 3 3 ]
+"13
+} 0
+"56 /opt/microchip/xc8/v1.45/sources/common/ftdiv.c
+[v ___ftdiv __ftdiv `(f  1 e 3 0 ]
+{
+"60
+[v ___ftdiv@f3 f3 `f  1 a 3 21 ]
+"59
+[v ___ftdiv@sign sign `uc  1 a 1 25 ]
+[v ___ftdiv@exp exp `uc  1 a 1 24 ]
+[v ___ftdiv@cntr cntr `uc  1 a 1 20 ]
+"56
+[v ___ftdiv@f2 f2 `f  1 p 3 10 ]
+[v ___ftdiv@f1 f1 `f  1 p 3 13 ]
+"86
+} 0
+"28 /opt/microchip/xc8/v1.45/sources/common/lwtoft.c
+[v ___lwtoft __lwtoft `(f  1 e 3 0 ]
+{
+[v ___lwtoft@c c `ui  1 p 2 8 ]
+"31
+} 0
+"62 /opt/microchip/xc8/v1.45/sources/common/float.c
+[v ___ftpack __ftpack `(f  1 e 3 0 ]
+{
+[v ___ftpack@arg arg `um  1 p 3 0 ]
+[v ___ftpack@exp exp `uc  1 p 1 3 ]
+[v ___ftpack@sign sign `uc  1 p 1 4 ]
+"86
+} 0
+"80 /home/oscar/MPLABXProjects/ins/adc.X/adc_main.c
+[v _runADC runADC `(v  1 e 1 0 ]
+{
+"85
+} 0
+"59
+[v _configUART configUART `(v  1 e 1 0 ]
+{
+"65
+} 0
+"40
+[v _configTimer configTimer `(v  1 e 1 0 ]
+{
+"46
+} 0
+"212
+[v _configLCD configLCD `(v  1 e 1 0 ]
+{
+"214
+[v configLCD@msg msg `[12]uc  1 a 12 13 ]
+[v configLCD@i i `uc  1 a 1 25 ]
+[v configLCD@F1828 F1828 `[12]uc  1 s 12 F1828 ]
+"225
+} 0
+"130
+[v _defineChar defineChar `(v  1 e 1 0 ]
+{
+"132
+[v defineChar@data data `[8]uc  1 a 8 0 ]
+[v defineChar@i i `uc  1 a 1 8 ]
+[v defineChar@F1815 F1815 `[8]uc  1 s 8 F1815 ]
+"136
+} 0
+"185
+[v _dato dato `(v  1 e 1 0 ]
+{
+"187
+[v dato@t t `i  1 a 2 6 ]
+[v dato@estado estado `i  1 a 2 4 ]
+"185
+[v dato@dat dat `ui  1 p 2 0 ]
+"210
+} 0
+"159
+[v _comando comando `(v  1 e 1 0 ]
+{
+"161
+[v comando@t t `i  1 a 2 6 ]
+[v comando@estado estado `i  1 a 2 4 ]
+"159
+[v comando@com com `ui  1 p 2 0 ]
+"183
+} 0
+"138
+[v _confBusLCD confBusLCD `(v  1 e 1 0 ]
+{
+"140
+[v confBusLCD@t t `i  1 a 2 4 ]
+[v confBusLCD@estado estado `i  1 a 2 2 ]
+"157
+} 0
+"48
+[v _configADC configADC `(v  1 e 1 0 ]
+{
+"57
+} 0
